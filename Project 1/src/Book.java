@@ -6,7 +6,7 @@ public class Book {
 	private Date datePublished;
 	
 	//commit / push test 
-	//@Gent Blaku
+	//Gent Blaku
 	number = 10001;
 	
 	
