@@ -10,7 +10,7 @@ public class Book {
 	int number2 = 10001;
 	
 
-	
+	int number3 = number2;
 	private String whassup = "Whassup my homie, how are you doing. Would you like a longer message";
 
 	/*
