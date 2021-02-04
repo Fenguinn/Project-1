@@ -9,9 +9,10 @@ public class Book {
 	//Gent Blaku
 	int number2 = 10001;
 	
+
 	
 	private String whassup = "Whassup my homie, how are you doing. Would you like a longer message";
-	
+
 	/*
 	@Override
 	public boolean equals(Object obj){ }
