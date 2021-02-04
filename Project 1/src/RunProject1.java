@@ -5,7 +5,7 @@ public class RunProject1 {
 		//new Kiosk().run();
 //	}
 	
-	public void main(String[] args) {
+	public static void main(String[] args) {
 		Date date = new Date();
 		System.out.println(date.toString());
 	}

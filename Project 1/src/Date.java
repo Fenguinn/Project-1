@@ -41,7 +41,7 @@ public class Date {
 	
 	public String toString() { 
 		//make this prettier
-		return String.valueOf(this.month) + String.valueOf(this.day) + String.valueOf(this.year);
+		return String.valueOf(this.month) + " " + String.valueOf(this.day) + " " + String.valueOf(this.year);
 	}
 	
 	
