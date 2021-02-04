@@ -10,7 +10,7 @@ public class Book {
 	int number2 = 10001;
 	
 	
-	
+	private String whassup = "Whassup my homie, how are you doing. Would you like a longer message"
 	
 	/*
 	@Override
