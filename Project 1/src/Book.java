@@ -7,7 +7,7 @@ public class Book {
 	
 	//commit / push test 
 	//Gent Blaku
-	number = 10001;
+	int number2 = 10001;
 	
 	
 	
