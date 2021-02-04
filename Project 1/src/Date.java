@@ -6,6 +6,21 @@ public class Date {
 	private int year;
 	private int month;
 	private int day;
+	private static final int MINYEAR = 1900;
+	/*private enum Months {
+		JANUARY(31), FEBRUARY(28), MARCH(31), APRIL(30), MAY(31), JUNE(30), JULY(31), AUGUST(31), SEPTEMBER(30), OCTOBER(31), NOVEMBER(30), DECEMBER(31);
+		
+		private int daysInMonth;
+		
+		Months(int daysInMonth){
+			this.daysInMonth = daysInMonth;
+		}
+		
+		private int daysInMonth() {
+			return daysInMonth;
+		}
+	}
+	*/
 	public Date(String date) {	//taking mm/dd/yyyy and create a Date object
 		StringTokenizer tokenizer = new StringTokenizer(date, "/");
 		this.month = Integer.parseInt(tokenizer.nextToken());
@@ -13,14 +28,7 @@ public class Date {
 		this.year  = Integer.parseInt(tokenizer.nextToken());	
 		
 	} 
-	/*
-	public void main(String[] args) {
-		Date date = new Date();
-		System.out.println(this.month);
-		System.out.println(this.day);
-		System.out.println(this.year);
-	}
-	*/
+	
 	
 	public Date() { 
 		Calendar today = Calendar.getInstance();
@@ -31,7 +39,38 @@ public class Date {
 	} //create an object with today’s date (see Calendar class)
 	
 	
-	//public boolean isValid() { }
+	public boolean isValid() { 
+		if (this.day < 1) {
+			return false;
+		}
+		
+		
+		if (this.month < MINYEAR) {
+			return false;		
+		}
+		
+		Date today = new Date();
+		if (this.year > today.year) {
+			return false;
+		}
+		else if (this.year == today.year) {
+			if (today.month > today.month ) {
+				return false;
+			}
+			else if (this.month == today.month) {
+				if (this.day > today.day) {
+					return false;
+				}
+			}
+		}
+	
+		
+		
+		
+		
+	}
+	
+	
 	
 	/*
 	@Override
@@ -41,7 +80,7 @@ public class Date {
 	
 	public String toString() { 
 		//make this prettier
-		return String.valueOf(this.month) + " " + String.valueOf(this.day) + " " + String.valueOf(this.year);
+		return String.valueOf(this.month+1) + " " + String.valueOf(this.day) + " " + String.valueOf(this.year);
 	}
 	
 	
