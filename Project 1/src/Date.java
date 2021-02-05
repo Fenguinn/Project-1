@@ -7,6 +7,9 @@ public class Date {
 	private int month;
 	private int day;
 	private static final int MINYEAR = 1900;
+	private static  boolean leapYearCheck = false;
+	private static final int QUARTER  = 4, CENTURY = 100, QUADRICENTENNIAL = 400;
+	
 	
 	public Date(String date) {	//taking mm/dd/yyyy and create a Date object
 		StringTokenizer tokenizer = new StringTokenizer(date, "/");
@@ -41,7 +44,7 @@ public class Date {
 			return false;
 		}
 		else if (this.year == today.year) {
-			if (today.month > today.month ) {
+			if (this.month > today.month ) {
 				return false;
 			}
 			else if (this.month == today.month) {
@@ -50,11 +53,102 @@ public class Date {
 				}
 			}
 		}
-	
 		
+		
+		if (this.month == Months.JANUARY) {
+			if (this.day > Months.MaxDaysPerMonth(Months.JANUARY, leapYearCheck)) {
+				return false;
+			}
+		}
+		
+		else if (this.month == Months.FEBRUARY) {
+			
+			leapYearCheck = checkForLeapYear(this.year);
+			if (this.day > Months.MaxDaysPerMonth(Months.FEBRUARY, leapYearCheck)) {
+				return false;
+			}
+			
+		}
+		
+		
+		else if (this.month == Months.MARCH) {
+			if (this.day > Months.MaxDaysPerMonth(Months.MARCH, leapYearCheck)) {
+				return false;
+			}
+		}
+		else if (this.month == Months.APRIL) {
+			if (this.day > Months.MaxDaysPerMonth(Months.APRIL, leapYearCheck)) {
+				return false;
+			}
+		}
+		else if (this.month == Months.MAY) {
+			if (this.day > Months.MaxDaysPerMonth(Months.MAY, leapYearCheck)) {
+				return false;
+			}
+		}
+		else if (this.month == Months.JUNE) {
+			if (this.day > Months.MaxDaysPerMonth(Months.JUNE, leapYearCheck)) {
+				return false;
+			}
+		}
+		else if (this.month == Months.JULY) {
+			if (this.day > Months.MaxDaysPerMonth(Months.JULY, leapYearCheck)) {
+				return false;
+			}
+		}
+		else if (this.month == Months.AUGUST) {
+			if (this.day > Months.MaxDaysPerMonth(Months.AUGUST, leapYearCheck)) {
+				return false;
+			}
+		}
+		else if (this.month == Months.SEPTEMBER) {
+			if (this.day > Months.MaxDaysPerMonth(Months.SEPTEMBER, leapYearCheck)) {
+				return false;
+			}
+			
+		}
+		else if (this.month == Months.OCTOBER) {
+			if (this.day > Months.MaxDaysPerMonth(Months.OCTOBER, leapYearCheck)) {
+				return false;
+			}
+		}
+		else if (this.month == Months.NOVEMBER) {
+			if (this.day > Months.MaxDaysPerMonth(Months.NOVEMBER, leapYearCheck)) {
+				return false;
+			}
+		}
+		else if (this.month == Months.DECEMBER) {
+			if (this.day > Months.MaxDaysPerMonth(Months.DECEMBER, leapYearCheck)) {
+				return false;
+			}
+		}
 		return true;
 		
 		
+	}
+	
+	
+	
+	private boolean checkForLeapYear(int bookYear) {
+		boolean leapYear;
+		if (bookYear % QUARTER == 0 ) {
+			if(bookYear % CENTURY == 0) {
+				if (bookYear % QUADRICENTENNIAL == 0) {
+					leapYear = true;
+				}
+				else {
+					leapYear = false;
+				}
+			}
+			else { 
+				leapYear = true;
+			}
+		}
+	
+		else {
+			leapYear = false;
+		}
+		return leapYear;
 	}
 	
 	
