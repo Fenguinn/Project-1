@@ -150,12 +150,21 @@ public class Date {
 	
 	
 	
-	/*
-	@Override
-	public boolean equals(Object obj){ }
-	*/
-	@Override
 	
+	@Override
+	public boolean equals(Object obj){
+		if (obj == null) {
+			return false;
+		}
+		else if (obj instanceof Date){
+			Date other = (Date)obj;
+			if (this.day == other.day && this.month == other.month && this.year == other.year)
+				return true;
+		}
+		return false;
+	}
+	
+	@Override
 	public String toString() { 
 		//make this prettier
 		return String.valueOf(this.month+1) + "/" + String.valueOf(this.day) + "/" + String.valueOf(this.year);
