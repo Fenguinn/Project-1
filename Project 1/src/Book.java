@@ -12,6 +12,7 @@ public class Book {
 		this.name   = bookName;
 		Date date = new Date(publishDate);
 		
+		// This should be called in Library.java
 		//if (!date.isValid()) {
 			//THIS HAS TO BE A PRINT "Invalid Date!"
 		//	return;
