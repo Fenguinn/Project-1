@@ -4,6 +4,23 @@ public class Book {
 	private String name;
 	private boolean checkedOut; //set to true if the book has been checked out
 	private Date datePublished;
+	private static int availSerial = 10001;
+	
+	public Book(String bookName, String publishDate) {
+		this.number = String.valueOf(availSerial);
+		this.checkedOut = false;
+		this.name   = bookName;
+		Date date = new Date(publishDate);
+		
+		//if (!date.isValid()) {
+			//THIS HAS TO BE A PRINT "Invalid Date!"
+		//	return;
+	//	}
+		
+		this.datePublished = date;
+		availSerial +=1;
+		
+	}
 	
 	
 	/*

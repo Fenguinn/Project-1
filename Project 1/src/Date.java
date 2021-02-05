@@ -34,7 +34,7 @@ public class Date {
 		}
 		
 		
-		if (this.month < MINYEAR) {
+		if (this.year < MINYEAR) {
 			return false;		
 		}
 		
@@ -158,7 +158,7 @@ public class Date {
 	@Override
 	public String toString() { 
 		//make this prettier
-		return String.valueOf(this.month+1) + "/" + String.valueOf(this.day) + "/" + String.valueOf(this.year);
+		return String.valueOf(this.month) + "/" + String.valueOf(this.day) + "/" + String.valueOf(this.year);
 	}
 	
 	
