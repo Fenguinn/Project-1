@@ -24,10 +24,53 @@ public class Book {
 	}
 	
 	
-	/*
+	
 	@Override
-	public boolean equals(Object obj){ }
+	public boolean equals(Object obj){
+		if (obj == null) {
+			return false;
+		}
+		else if (obj instanceof Book){
+			Book other = (Book)obj;
+			if (this.number == other.number)
+				return true;
+		}
+		return false;
+	}
+	 
+	
+	
+	public boolean checkOut() {
+	//	if (this.checkedOut == false) {
+			this.checkedOut = true;
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
+	
+	
+	
+	public boolean isCheckedOut () {
+		if (this.checkedOut == false) 
+			return false;
+		else 
+			return true;
+	}
+	
+	
+	
+	public boolean returnBook () {
+		if (this.checkedOut == true)
+			this.checkedOut = false;
+	}
+	
+	
 	@Override
-	public String toString() { }
-	*/
+	public String toString() {
+		return "Book#" + this.number + "::" + this.name + "::" + this.datePublished + "::is available.";
+	}
+	
 }
