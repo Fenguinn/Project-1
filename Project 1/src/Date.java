@@ -7,20 +7,7 @@ public class Date {
 	private int month;
 	private int day;
 	private static final int MINYEAR = 1900;
-	/*private enum Months {
-		JANUARY(31), FEBRUARY(28), MARCH(31), APRIL(30), MAY(31), JUNE(30), JULY(31), AUGUST(31), SEPTEMBER(30), OCTOBER(31), NOVEMBER(30), DECEMBER(31);
-		
-		private int daysInMonth;
-		
-		Months(int daysInMonth){
-			this.daysInMonth = daysInMonth;
-		}
-		
-		private int daysInMonth() {
-			return daysInMonth;
-		}
-	}
-	*/
+	
 	public Date(String date) {	//taking mm/dd/yyyy and create a Date object
 		StringTokenizer tokenizer = new StringTokenizer(date, "/");
 		this.month = Integer.parseInt(tokenizer.nextToken());
@@ -65,7 +52,7 @@ public class Date {
 		}
 	
 		
-		
+		return true;
 		
 		
 	}
