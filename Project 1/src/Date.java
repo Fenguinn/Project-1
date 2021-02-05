@@ -130,25 +130,22 @@ public class Date {
 	
 	
 	private boolean checkForLeapYear(int bookYear) {
-		boolean leapYear;
 		if (bookYear % QUARTER == 0 ) {
 			if(bookYear % CENTURY == 0) {
 				if (bookYear % QUADRICENTENNIAL == 0) {
-					leapYear = true;
+					return true;
 				}
 				else {
-					leapYear = false;
+					return false;
 				}
 			}
 			else { 
-				leapYear = true;
+				return true;
 			}
 		}
 	
-		else {
-			leapYear = false;
-		}
-		return leapYear;
+		
+		return false;
 	}
 	
 	
