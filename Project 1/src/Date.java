@@ -161,7 +161,7 @@ public class Date {
 	
 	public String toString() { 
 		//make this prettier
-		return String.valueOf(this.month+1) + " " + String.valueOf(this.day) + " " + String.valueOf(this.year);
+		return String.valueOf(this.month+1) + "/" + String.valueOf(this.day) + "/" + String.valueOf(this.year);
 	}
 	
 	
