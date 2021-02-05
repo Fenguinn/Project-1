@@ -49,4 +49,9 @@ public class Months {
 	}
 	
 	
+	public static int MaxDaysPerMonth(int month) {
+		return MaxDaysPerMonth(month, false);
+	}
+	
+	
 }

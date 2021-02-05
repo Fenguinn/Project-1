@@ -7,7 +7,6 @@ public class Date {
 	private int month;
 	private int day;
 	private static final int MINYEAR = 1900;
-	private static  boolean leapYearCheck = false;
 	private static final int QUARTER  = 4, CENTURY = 100, QUADRICENTENNIAL = 400;
 	
 	
@@ -54,77 +53,71 @@ public class Date {
 			}
 		}
 		
-		
 		if (this.month == Months.JANUARY) {
-			if (this.day > Months.MaxDaysPerMonth(Months.JANUARY, leapYearCheck)) {
+			if (this.day > Months.MaxDaysPerMonth(Months.JANUARY)) {
 				return false;
 			}
 		}
 		
 		else if (this.month == Months.FEBRUARY) {
 			
-			leapYearCheck = checkForLeapYear(this.year);
+			boolean leapYearCheck = checkForLeapYear(this.year);
 			if (this.day > Months.MaxDaysPerMonth(Months.FEBRUARY, leapYearCheck)) {
 				return false;
 			}
-			
 		}
-		
-		
 		else if (this.month == Months.MARCH) {
-			if (this.day > Months.MaxDaysPerMonth(Months.MARCH, leapYearCheck)) {
+			if (this.day > Months.MaxDaysPerMonth(Months.MARCH)) {
 				return false;
 			}
 		}
 		else if (this.month == Months.APRIL) {
-			if (this.day > Months.MaxDaysPerMonth(Months.APRIL, leapYearCheck)) {
+			if (this.day > Months.MaxDaysPerMonth(Months.APRIL)) {
 				return false;
 			}
 		}
 		else if (this.month == Months.MAY) {
-			if (this.day > Months.MaxDaysPerMonth(Months.MAY, leapYearCheck)) {
+			if (this.day > Months.MaxDaysPerMonth(Months.MAY)) {
 				return false;
 			}
 		}
 		else if (this.month == Months.JUNE) {
-			if (this.day > Months.MaxDaysPerMonth(Months.JUNE, leapYearCheck)) {
+			if (this.day > Months.MaxDaysPerMonth(Months.JUNE)) {
 				return false;
 			}
 		}
 		else if (this.month == Months.JULY) {
-			if (this.day > Months.MaxDaysPerMonth(Months.JULY, leapYearCheck)) {
+			if (this.day > Months.MaxDaysPerMonth(Months.JULY)) {
 				return false;
 			}
 		}
 		else if (this.month == Months.AUGUST) {
-			if (this.day > Months.MaxDaysPerMonth(Months.AUGUST, leapYearCheck)) {
+			if (this.day > Months.MaxDaysPerMonth(Months.AUGUST)) {
 				return false;
 			}
 		}
 		else if (this.month == Months.SEPTEMBER) {
-			if (this.day > Months.MaxDaysPerMonth(Months.SEPTEMBER, leapYearCheck)) {
+			if (this.day > Months.MaxDaysPerMonth(Months.SEPTEMBER)) {
 				return false;
 			}
 			
 		}
 		else if (this.month == Months.OCTOBER) {
-			if (this.day > Months.MaxDaysPerMonth(Months.OCTOBER, leapYearCheck)) {
+			if (this.day > Months.MaxDaysPerMonth(Months.OCTOBER)) {
 				return false;
 			}
 		}
 		else if (this.month == Months.NOVEMBER) {
-			if (this.day > Months.MaxDaysPerMonth(Months.NOVEMBER, leapYearCheck)) {
+			if (this.day > Months.MaxDaysPerMonth(Months.NOVEMBER)) {
 				return false;
 			}
 		}
 		else if (this.month == Months.DECEMBER) {
-			if (this.day > Months.MaxDaysPerMonth(Months.DECEMBER, leapYearCheck)) {
+			if (this.day > Months.MaxDaysPerMonth(Months.DECEMBER)) {
 				return false;
 			}
 		}
 		return true;
-		
-		
 	}
 	
 	
@@ -143,8 +136,6 @@ public class Date {
 				return true;
 			}
 		}
-	
-		
 		return false;
 	}
 	
