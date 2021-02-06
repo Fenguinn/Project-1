@@ -120,6 +120,22 @@ public class Date {
 		return true;
 	}
 	
+	public boolean isOlderThan(Date other) {
+		if (this.year > other.year) {
+			return false;
+		}
+		else if (this.year == other.year) {
+			if (this.month > other.month ) {
+				return false;
+			}
+			else if (this.month == other.month) {
+				if (this.day > other.day) {
+					return false;
+				}
+			}
+		}
+		return true;
+	}
 	
 	
 	private boolean checkForLeapYear(int bookYear) {

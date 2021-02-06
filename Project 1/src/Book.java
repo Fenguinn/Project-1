@@ -23,6 +23,34 @@ public class Book {
 		
 	}
 	
+	public boolean isCheckedOut () {
+		if (this.checkedOut == false) 
+			return false;
+		else 
+			return true;
+	}
+	
+	public Date getDate() {
+		return this.datePublished;
+	}
+	
+	public String getName() {
+		return this.name;
+	}
+	
+	public String getNumber() {
+		return this.number;
+	}
+	
+	public void checkOut() {
+		if (this.checkedOut == false)
+			this.checkedOut = true;
+	}
+	
+	public void returnBook () {
+		if (this.checkedOut == true)
+			this.checkedOut = false;
+	}
 	
 	
 	@Override
@@ -37,37 +65,6 @@ public class Book {
 		}
 		return false;
 	}
-	 
-	
-	
-	public boolean checkOut() {
-	//	if (this.checkedOut == false) {
-			this.checkedOut = true;
-			return true;
-		}
-		else {
-			return false;
-		}
-	}
-	
-	
-	
-	
-	public boolean isCheckedOut () {
-		if (this.checkedOut == false) 
-			return false;
-		else 
-			return true;
-	}
-	
-	
-	
-	public boolean returnBook () {
-		if (this.checkedOut == true)
-			this.checkedOut = false;
-	}
-	
-	
 	@Override
 	public String toString() {
 		return "Book#" + this.number + "::" + this.name + "::" + this.datePublished + "::is available.";
