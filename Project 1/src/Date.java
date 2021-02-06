@@ -30,6 +30,262 @@ public class Date {
 	
 	
 	public static void main(String[] args) {
+		boolean valid;
+		
+		//Invalid days
+		System.out.println("Now testing Invalid days (should all be false):");
+		
+		System.out.println("Testing 1/40/2015...");
+		Date date = new Date("1/40/2015");
+		valid = date.isValid();
+		
+		if (!valid) {
+			System.out.println("Test Case#1 is not valid (returned false). PASSED!");
+		}
+		else {
+			System.out.println("Test Case#1 is not valid, but it returned true. FAILED!");
+		}
+		
+		
+		System.out.println("Testing 1/0/2015...");
+		date = new Date("1/0/2015");
+		valid = date.isValid();
+		
+		if (!valid) {
+			System.out.println("Test Case#1 is not valid (returned false). PASSED!");
+		}
+		else {
+			System.out.println("Test Case#1 is not valid, but it returned true. FAILED!");
+		}
+		
+		
+		
+		
+		//Invalid Months
+		System.out.println("Now testing Invalid months (should all be false):");
+		
+		System.out.println("Testing 0/15/2015...");
+		date = new Date("0/15/2015");
+		valid = date.isValid();
+		
+		if (!valid) {
+			System.out.println("Test Case#1 is not valid (returned false). PASSED!");
+		}
+		else {
+			System.out.println("Test Case#1 is not valid, but it returned true. FAILED!");
+		}
+		
+		System.out.println("Testing -1/15/2015...");
+		date = new Date("-1/15/2015");
+		valid = date.isValid();
+		
+		if (!valid) {
+			System.out.println("Test Case#1 is not valid (returned false). PASSED!");
+		}
+		else {
+			System.out.println("Test Case#1 is not valid, but it returned true. FAILED!");
+		}
+		
+		
+		System.out.println("Testing 13/15/2015...");
+		date = new Date("13/15/2015");
+		valid = date.isValid();
+		
+		if (!valid) {
+			System.out.println("Test Case#1 is not valid (returned false). PASSED!");
+		}
+		else {
+			System.out.println("Test Case#1 is not valid, but it returned true. FAILED!");
+		}
+		
+		
+		System.out.println("Testing 5/15/2021...");
+		date = new Date("5/15/2021");
+		valid = date.isValid();
+		
+		if (!valid) {
+			System.out.println("Test Case#1 is not valid (returned false). PASSED!");
+		}
+		else {
+			System.out.println("Test Case#1 is not valid, but it returned true. FAILED!");
+		}
+		
+		
+		//Invalid years
+		System.out.println("Now testing Invalid years (should all be false):");
+		System.out.println("Testing 3/15/2022...");
+		date = new Date("3/15/2022");
+		valid = date.isValid();
+		
+		if (!valid) {
+			System.out.println("Test Case#1 is not valid (returned false). PASSED!");
+		}
+		else {
+			System.out.println("Test Case#1 is not valid, but it returned true. FAILED!");
+		}
+		
+		System.out.println("Testing 3/15/1899...");
+		date = new Date("3/15/1899");
+		valid = date.isValid();
+		
+		if (!valid) {
+			System.out.println("Test Case#1 is not valid (returned false). PASSED!");
+		}
+		else {
+			System.out.println("Test Case#1 is not valid, but it returned true. FAILED!");
+		}
+		
+		
+		System.out.println("Testing 3/15/-2020...");
+		date = new Date("3/15/-2020");
+		valid = date.isValid();
+		
+		if (!valid) {
+			System.out.println("Test Case#1 is not valid (returned false). PASSED!");
+		}
+		else {
+			System.out.println("Test Case#1 is not valid, but it returned true. FAILED!");
+		}
+		
+		
+		
+		//Invalid days per Month (1 more than max)
+		System.out.println("Now testing Invalid days per Month (should all be false):");
+		System.out.println("Testing 3/32/2015...");
+		date = new Date("3/32/2015");
+		valid = date.isValid();
+		
+		if (!valid) {
+			System.out.println("Test Case#1 is not valid (returned false). PASSED!");
+		}
+		else {
+			System.out.println("Test Case#1 is not valid, but it returned true. FAILED!");
+		}
+		
+		
+		
+		System.out.println("Testing 4/31/2015...");
+		date = new Date("4/31/2015");
+		valid = date.isValid();
+		
+		if (!valid) {
+			System.out.println("Test Case#1 is not valid (returned false). PASSED!");
+		}
+		else {
+			System.out.println("Test Case#1 is not valid, but it returned true. FAILED!");
+		}
+		
+		
+		
+		System.out.println("Testing 2/30/2015...");
+		date = new Date("2/30/2015");
+		valid = date.isValid();
+		
+		if (!valid) {
+			System.out.println("Test Case#1 is not valid (returned false). PASSED!");
+		}
+		else {
+			System.out.println("Test Case#1 is not valid, but it returned true. FAILED!");
+		}
+		
+		
+		
+		//Valid days per Month
+		System.out.println("Now testing VALID days per month (should all be true):");
+		System.out.println("Testing 3/31/2015...");
+		date = new Date("3/31/2015");
+		valid = date.isValid();
+		 
+		if (valid) {
+			System.out.println("Test Case#1 is valid and it returned true. PASSED!");
+		} 
+		else {
+			System.out.println("Test Case#1 is valid, (returned false). FAILED!");
+		}
+		
+		
+		
+		System.out.println("Testing 4/30/2015...");
+		date = new Date("4/30/2015");
+		valid = date.isValid();
+		
+		 
+		if (valid) {
+			System.out.println("Test Case#1 is valid and it returned true. PASSED!");
+		} 
+		else {
+			System.out.println("Test Case#1 is valid, (returned false). FAILED!");
+		}
+		
+		
+		System.out.println("Testing 2/28/2015...");
+		date = new Date("2/28/2015");
+		valid = date.isValid();
+		
+		 
+		if (valid) {
+			System.out.println("Test Case#1 is valid and it returned true. PASSED!");
+		} 
+		else {
+			System.out.println("Test Case#1 is valid, (returned false). FAILED!");
+		}
+		
+		
+		//Day after today 
+		System.out.println("Now Testing the day after today. Should return false:");
+		Date tomorrow = new Date();
+		tomorrow.day++;
+		
+		valid = tomorrow.isValid();
+		if (!valid) {
+			System.out.println("Test Case#1 is not valid (returned false). PASSED!");
+		}
+		else {
+			System.out.println("Test Case#1 is not valid, but it returned true. FAILED!");
+		}
+		
+		
+		//Today
+		System.out.println("Now testing today. Should return true:");
+		Date today = new Date();
+		valid = today.isValid();
+		
+		if (!valid) {
+			System.out.println("Test Case#1 is valid (returned false). FAILED!");
+		}
+		else {
+			System.out.println("Test Case#1 is valid, and it returned true. PASSED!");
+		}
+		
+		
+		
+		//Leap Year 
+		System.out.println("Now testing leap year. should return true:");
+		System.out.println("Now testing 2/29/2008...");
+		Date leapYear = new Date("2/29/2008");
+		valid = leapYear.isValid();
+		if (!valid) {
+			System.out.println("Test Case#1 is valid (returned false). FAILED!");
+		}
+		else {
+			System.out.println("Test Case#1 is valid, and it returned true. PASSED!");
+		}
+		
+		
+		//Not a leap year
+		System.out.println("Now testing a normal year. should return false:");
+		System.out.println("Now testing 2/29/2009...");
+		Date notLeapYear = new Date("2/29/2009");
+		valid = notLeapYear.isValid();
+		if (!valid) {
+			System.out.println("Test Case#1 is not valid (returned false). PASSED!");
+		}
+		else {
+			System.out.println("Test Case#1 is not valid, and it returned true. FAILED!");
+		}
+		
+		
+		
 		
 	}
 	
