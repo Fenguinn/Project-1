@@ -33,7 +33,7 @@ public class Library {
 		
 		books = new Book[books.length+FOUR];
 		
-		for (int i=0; i<books.length; i++) {
+		for (int i=0; i<booksClone.length; i++) {
 			books[i] = booksClone[i];
 		}
 		
