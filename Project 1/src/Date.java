@@ -27,6 +27,19 @@ public class Date {
 		
 	} //create an object with today’s date (see Calendar class)
 	
+	
+	
+	public static void main(String[] args) {
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 	private boolean checkForLeapYear(int bookYear) {
 		if (bookYear % QUARTER == 0 ) {
 			if(bookYear % CENTURY == 0) {
@@ -170,6 +183,10 @@ public class Date {
 
 	
 
+	
+	
+	
+	
 	
 	@Override
 	public boolean equals(Object obj){
