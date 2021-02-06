@@ -134,6 +134,9 @@ public class Date {
 				}
 			}
 		}
+		if (this.equals(other)) {
+			return false;
+		}
 		return true;
 	}
 	
