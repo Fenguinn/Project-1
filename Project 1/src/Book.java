@@ -15,6 +15,13 @@ public class Book {
 		availSerial +=1;
 	}
 	
+	public Book(String serialNumber) {
+		this.number = serialNumber;
+		this.name = null;
+		this.checkedOut = false;
+		this.datePublished = null;
+	}
+	
 	public boolean isCheckedOut () {
 		if (this.checkedOut == false) 
 			return false;
@@ -52,7 +59,7 @@ public class Book {
 		}
 		else if (obj instanceof Book){
 			Book other = (Book)obj;
-			if (this.number == other.number)
+			if (this.number.equals(other.number))
 				return true;
 		}
 		return false;

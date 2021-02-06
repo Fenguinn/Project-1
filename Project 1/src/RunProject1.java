@@ -1,11 +1,11 @@
 
 
 public class RunProject1 {
-	//public static void main(String[] args) {
-		//new Kiosk().run();
-//	}
-	
 	public static void main(String[] args) {
+		new Kiosk().run();
+	}
+	
+//	public static void main(String[] args) {
 //		Date date = new Date();
 //		
 //		Book book = new Book("Nice Test", "01/15/1950");
@@ -53,8 +53,8 @@ public class RunProject1 {
 //		lib.add(new Book("HER-story: Women Forgetten by History", "01/02/1988"));
 //		lib.add(new Book("Intro to the Ju Jutsu Japs", "01/02/2025"));
 //		lib.print();
-		
-	}
+//		
+//	}
 	
 	
 	

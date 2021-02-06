@@ -13,7 +13,7 @@ public class Library {
 	
 	
 	private int find(Book book) {
-		for (int i=0; i<books.length; i++) {
+		for (int i=0; i<numBooks; i++) {
 			if ( books[i].equals(book) ) {
 				return i;
 			}
@@ -58,7 +58,6 @@ public class Library {
 	
 	private void sortByDate() {
 		int oldestBookIndex;
-		int tempIndex;
 		for (int i = 0; i < numBooks -1; i++){
 			oldestBookIndex = i;
 			for (int j = i+1; j < numBooks; j++) {
@@ -79,7 +78,6 @@ public class Library {
 
 	private void sortByNumber() {
 		int smallestNumberIndex;
-		int tempIndex;
 		for (int i = 0; i < numBooks -1; i++){
 			smallestNumberIndex = i;
 			for (int j = i+1; j < numBooks; j++) {
