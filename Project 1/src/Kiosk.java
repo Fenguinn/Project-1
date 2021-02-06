@@ -73,19 +73,34 @@ public class Kiosk {
 					}
 					break;
 				case "PA":
+					if (library.isempty()) {
+						System.out.println("Library catalog is empty!");
+					}
+					else {
 					System.out.println("**List of books in the library.");
 					library.print();
 					System.out.println("**End of list");
+					}
 					break;
 				case "PD":
+					if (library.isempty()) {
+						System.out.println("Library catalog is empty!");
+					}
+					else {
 					System.out.println("**List of books by the dates published.");
 					library.printByDate();
 					System.out.println("**End of list");
+					}
 					break;
 				case "PN":
+					if (library.isempty()) {
+						System.out.println("Library catalog is empty!");
+					}
+					else {
 					System.out.println("**List of books by the book numbers.");
 					library.printByNumber();
 					System.out.println("**End of list");
+					}
 					break;
 				case "Q":
 					Quit = true;

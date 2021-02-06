@@ -150,9 +150,17 @@ public class Library {
 	}
 	
 	
+	public boolean isempty() {
+		if (numBooks ==0)
+			return true;
+		else 
+			return false;
+	}
+	
+	
 	public void print() {
 		for (int i = 0; i < numBooks; i++) {
-			if (books[i] != null && !books[i].isCheckedOut()) {
+			if (books[i] != null) {
 				System.out.println(books[i].toString());
 			}
 		}

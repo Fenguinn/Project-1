@@ -66,7 +66,12 @@ public class Book {
 	}
 	@Override
 	public String toString() {
-		return "Book#" + this.number + "::" + this.name + "::" + this.datePublished + "::is available.";
+		if (this.isCheckedOut()) {
+			return "Book#" + this.number + "::" + this.name + "::" + this.datePublished + "::is checked out.";
+		}
+		else{
+			return "Book#" + this.number + "::" + this.name + "::" + this.datePublished + "::is available.";
+		}
 	}
 	
 }

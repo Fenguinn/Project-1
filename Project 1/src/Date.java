@@ -8,7 +8,7 @@ public class Date {
 	private int day;
 	private static final int MINYEAR = 1900;
 	private static final int QUARTER  = 4, CENTURY = 100, QUADRICENTENNIAL = 400;
-	
+	private static final int MAXMONTH = 12, MINMONTH = 1;
 	
 	public Date(String date) {	//taking mm/dd/yyyy and create a Date object
 		StringTokenizer tokenizer = new StringTokenizer(date, "/");
@@ -27,6 +27,24 @@ public class Date {
 		
 	} //create an object with today’s date (see Calendar class)
 	
+	private boolean checkForLeapYear(int bookYear) {
+		if (bookYear % QUARTER == 0 ) {
+			if(bookYear % CENTURY == 0) {
+				if (bookYear % QUADRICENTENNIAL == 0) {
+					return true;
+				}
+				else {
+					return false;
+				}
+			}
+			else { 
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	
 	
 	public boolean isValid() { 
 		if (this.day < 1) {
@@ -36,6 +54,13 @@ public class Date {
 		
 		if (this.year < MINYEAR) {
 			return false;		
+		}
+		
+		if (this.month > MAXMONTH) {
+			return false;
+		}
+		else if (this.month<MINMONTH) {
+			return false;
 		}
 		
 		Date today = new Date();
@@ -120,6 +145,9 @@ public class Date {
 		return true;
 	}
 	
+	
+	
+	
 	public boolean isOlderThan(Date other) {
 		if (this.year > other.year) {
 			return false;
@@ -139,27 +167,9 @@ public class Date {
 		}
 		return true;
 	}
+
 	
-	
-	private boolean checkForLeapYear(int bookYear) {
-		if (bookYear % QUARTER == 0 ) {
-			if(bookYear % CENTURY == 0) {
-				if (bookYear % QUADRICENTENNIAL == 0) {
-					return true;
-				}
-				else {
-					return false;
-				}
-			}
-			else { 
-				return true;
-			}
-		}
-		return false;
-	}
-	
-	
-	
+
 	
 	@Override
 	public boolean equals(Object obj){
