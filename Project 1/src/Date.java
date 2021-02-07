@@ -52,10 +52,10 @@ public class Date {
 		valid = date.isValid();
 		
 		if (!valid) {
-			System.out.println("Test Case#1 is not valid (returned false). PASSED!");
+			System.out.println("Test Case#2 is not valid (returned false). PASSED!");
 		}
 		else {
-			System.out.println("Test Case#1 is not valid, but it returned true. FAILED!");
+			System.out.println("Test Case#2 is not valid, but it returned true. FAILED!");
 		}
 		
 		
@@ -69,10 +69,10 @@ public class Date {
 		valid = date.isValid();
 		
 		if (!valid) {
-			System.out.println("Test Case#1 is not valid (returned false). PASSED!");
+			System.out.println("Test Case#3 is not valid (returned false). PASSED!");
 		}
 		else {
-			System.out.println("Test Case#1 is not valid, but it returned true. FAILED!");
+			System.out.println("Test Case#3 is not valid, but it returned true. FAILED!");
 		}
 		
 		System.out.println("Testing -1/15/2015...");
@@ -80,10 +80,10 @@ public class Date {
 		valid = date.isValid();
 		
 		if (!valid) {
-			System.out.println("Test Case#1 is not valid (returned false). PASSED!");
+			System.out.println("Test Case#4 is not valid (returned false). PASSED!");
 		}
 		else {
-			System.out.println("Test Case#1 is not valid, but it returned true. FAILED!");
+			System.out.println("Test Case#4 is not valid, but it returned true. FAILED!");
 		}
 		
 		
@@ -92,10 +92,10 @@ public class Date {
 		valid = date.isValid();
 		
 		if (!valid) {
-			System.out.println("Test Case#1 is not valid (returned false). PASSED!");
+			System.out.println("Test Case#5 is not valid (returned false). PASSED!");
 		}
 		else {
-			System.out.println("Test Case#1 is not valid, but it returned true. FAILED!");
+			System.out.println("Test Case#5 is not valid, but it returned true. FAILED!");
 		}
 		
 		
@@ -104,10 +104,10 @@ public class Date {
 		valid = date.isValid();
 		
 		if (!valid) {
-			System.out.println("Test Case#1 is not valid (returned false). PASSED!");
+			System.out.println("Test Case#6 is not valid (returned false). PASSED!");
 		}
 		else {
-			System.out.println("Test Case#1 is not valid, but it returned true. FAILED!");
+			System.out.println("Test Case#6 is not valid, but it returned true. FAILED!");
 		}
 		
 		
@@ -118,10 +118,10 @@ public class Date {
 		valid = date.isValid();
 		
 		if (!valid) {
-			System.out.println("Test Case#1 is not valid (returned false). PASSED!");
+			System.out.println("Test Case#7 is not valid (returned false). PASSED!");
 		}
 		else {
-			System.out.println("Test Case#1 is not valid, but it returned true. FAILED!");
+			System.out.println("Test Case#7 is not valid, but it returned true. FAILED!");
 		}
 		
 		System.out.println("Testing 3/15/1899...");
@@ -129,10 +129,10 @@ public class Date {
 		valid = date.isValid();
 		
 		if (!valid) {
-			System.out.println("Test Case#1 is not valid (returned false). PASSED!");
+			System.out.println("Test Case#8 is not valid (returned false). PASSED!");
 		}
 		else {
-			System.out.println("Test Case#1 is not valid, but it returned true. FAILED!");
+			System.out.println("Test Case#8 is not valid, but it returned true. FAILED!");
 		}
 		
 		
@@ -141,10 +141,10 @@ public class Date {
 		valid = date.isValid();
 		
 		if (!valid) {
-			System.out.println("Test Case#1 is not valid (returned false). PASSED!");
+			System.out.println("Test Case#9 is not valid (returned false). PASSED!");
 		}
 		else {
-			System.out.println("Test Case#1 is not valid, but it returned true. FAILED!");
+			System.out.println("Test Case#9 is not valid, but it returned true. FAILED!");
 		}
 		
 		
@@ -156,10 +156,10 @@ public class Date {
 		valid = date.isValid();
 		
 		if (!valid) {
-			System.out.println("Test Case#1 is not valid (returned false). PASSED!");
+			System.out.println("Test Case#10 is not valid (returned false). PASSED!");
 		}
 		else {
-			System.out.println("Test Case#1 is not valid, but it returned true. FAILED!");
+			System.out.println("Test Case#10 is not valid, but it returned true. FAILED!");
 		}
 		
 		
@@ -169,10 +169,10 @@ public class Date {
 		valid = date.isValid();
 		
 		if (!valid) {
-			System.out.println("Test Case#1 is not valid (returned false). PASSED!");
+			System.out.println("Test Case#11 is not valid (returned false). PASSED!");
 		}
 		else {
-			System.out.println("Test Case#1 is not valid, but it returned true. FAILED!");
+			System.out.println("Test Case#11 is not valid, but it returned true. FAILED!");
 		}
 		
 		
@@ -182,10 +182,10 @@ public class Date {
 		valid = date.isValid();
 		
 		if (!valid) {
-			System.out.println("Test Case#1 is not valid (returned false). PASSED!");
+			System.out.println("Test Case#12 is not valid (returned false). PASSED!");
 		}
 		else {
-			System.out.println("Test Case#1 is not valid, but it returned true. FAILED!");
+			System.out.println("Test Case#12 is not valid, but it returned true. FAILED!");
 		}
 		
 		
@@ -197,10 +197,10 @@ public class Date {
 		valid = date.isValid();
 		 
 		if (valid) {
-			System.out.println("Test Case#1 is valid and it returned true. PASSED!");
+			System.out.println("Test Case#13 is valid and it returned true. PASSED!");
 		} 
 		else {
-			System.out.println("Test Case#1 is valid, (returned false). FAILED!");
+			System.out.println("Test Case#13 is valid, (returned false). FAILED!");
 		}
 		
 		
@@ -211,10 +211,10 @@ public class Date {
 		
 		 
 		if (valid) {
-			System.out.println("Test Case#1 is valid and it returned true. PASSED!");
+			System.out.println("Test Case#14 is valid and it returned true. PASSED!");
 		} 
 		else {
-			System.out.println("Test Case#1 is valid, (returned false). FAILED!");
+			System.out.println("Test Case#14 is valid, (returned false). FAILED!");
 		}
 		
 		
@@ -224,10 +224,10 @@ public class Date {
 		
 		 
 		if (valid) {
-			System.out.println("Test Case#1 is valid and it returned true. PASSED!");
+			System.out.println("Test Case#15 is valid and it returned true. PASSED!");
 		} 
 		else {
-			System.out.println("Test Case#1 is valid, (returned false). FAILED!");
+			System.out.println("Test Case#15 is valid, (returned false). FAILED!");
 		}
 		
 		
@@ -238,10 +238,10 @@ public class Date {
 		
 		valid = tomorrow.isValid();
 		if (!valid) {
-			System.out.println("Test Case#1 is not valid (returned false). PASSED!");
+			System.out.println("Test Case#16 is not valid (returned false). PASSED!");
 		}
 		else {
-			System.out.println("Test Case#1 is not valid, but it returned true. FAILED!");
+			System.out.println("Test Case#16 is not valid, but it returned true. FAILED!");
 		}
 		
 		
@@ -251,10 +251,10 @@ public class Date {
 		valid = today.isValid();
 		
 		if (!valid) {
-			System.out.println("Test Case#1 is valid (returned false). FAILED!");
+			System.out.println("Test Case#17 is valid (returned false). FAILED!");
 		}
 		else {
-			System.out.println("Test Case#1 is valid, and it returned true. PASSED!");
+			System.out.println("Test Case#17 is valid, and it returned true. PASSED!");
 		}
 		
 		
@@ -265,10 +265,10 @@ public class Date {
 		Date leapYear = new Date("2/29/2008");
 		valid = leapYear.isValid();
 		if (!valid) {
-			System.out.println("Test Case#1 is valid (returned false). FAILED!");
+			System.out.println("Test Case#18 is valid (returned false). FAILED!");
 		}
 		else {
-			System.out.println("Test Case#1 is valid, and it returned true. PASSED!");
+			System.out.println("Test Case#18 is valid, and it returned true. PASSED!");
 		}
 		
 		
@@ -278,10 +278,10 @@ public class Date {
 		Date notLeapYear = new Date("2/29/2009");
 		valid = notLeapYear.isValid();
 		if (!valid) {
-			System.out.println("Test Case#1 is not valid (returned false). PASSED!");
+			System.out.println("Test Case#19 is not valid (returned false). PASSED!");
 		}
 		else {
-			System.out.println("Test Case#1 is not valid, and it returned true. FAILED!");
+			System.out.println("Test Case#19 is not valid, and it returned true. FAILED!");
 		}
 		
 		
