@@ -1,4 +1,7 @@
-
+/**
+ * A class that holds relevant information regarding the months of the gregorian calender.
+ * @author Abdullah Salem, Gent Blaku
+ */
 public class Months {
 
 	public static final int JANUARY =1 ;
@@ -13,7 +16,14 @@ public class Months {
 	public static final int OCTOBER= 10;
 	public static final int NOVEMBER= 11;
 	public static final int DECEMBER= 12;
+	public static final int NOTFOUND = -1;
 	
+	/**
+	 * A function that fetches the maximum possible days of any given month.
+	 * @param month is the number representing the order of the months.
+	 * @param isLeapYear is a boolean to account for a leap year
+	 * @return an integer holding the maximum possible days of the given month
+	 */
 	public static int MaxDaysPerMonth(int month, boolean isLeapYear) {
 		switch(month) {
 			case (JANUARY):
@@ -45,10 +55,14 @@ public class Months {
 			case (DECEMBER):
 				return 31;
 		}
-		return -1;
+		return NOTFOUND;
 	}
 	
-	
+	/**
+	 * A function that fetches the maximum possible days of any given month.
+	 * @param month is the number representing the order of the months.
+	 * @return an integer holding the maximum possible days of the given month
+	 */
 	public static int MaxDaysPerMonth(int month) {
 		return MaxDaysPerMonth(month, false);
 	}

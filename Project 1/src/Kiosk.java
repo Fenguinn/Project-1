@@ -1,5 +1,9 @@
 import java.util.Scanner;
 import java.util.StringTokenizer;
+/**
+ * A class that facilitates the input and output of the program -- The User Interface
+ * @author Abdullah Salem, Gent Blaku
+ */
 public class Kiosk {
 
 	//...
@@ -8,10 +12,11 @@ public class Kiosk {
 	private static final int THIRDINDEX = 2;
 	private static final int MAXINPUTS = 3;
 	
+	/**
+	 * A method that handles the user input and gives appropriate output.
+	 * It creates objects of the other classes and calls their public methods to handle data.
+	 */
 	public void run() {
-		String command;
-		String bookName;
-		String date;
 		String line;
 		boolean Quit = false;
 		
@@ -21,20 +26,17 @@ public class Kiosk {
 		StringTokenizer tokens;
 		String tokensArray[];
 		
-		while(!Quit){
+		while(!Quit){ //Running until the user quits
 			line = input.nextLine();
 			tokens = new StringTokenizer(line, ",");
 			tokensArray = this.tokenizedInput(tokens);
-//			command = tokensArray[0];
-//			bookName = tokensArray[1];
-//			date = tokensArray[2];
 			
 			
 			
 			
 			switch(tokensArray[FIRSTINDEX]) 
 			{
-				case "A":
+				case "A": //adding a book
 					Date bookToAddDate = new Date(tokensArray[THIRDINDEX]);
 					if (bookToAddDate.isValid()) {
 						Book bookToAdd = new Book(tokensArray[SECONDINDEX],tokensArray[THIRDINDEX]);
@@ -45,7 +47,7 @@ public class Kiosk {
 						System.out.println("Invalid Date!");
 					}
 					break;
-				case "R":
+				case "R": //removing a book
 					Book bookToBeRemoved = new Book(tokensArray[SECONDINDEX]);
 					if (library.remove(bookToBeRemoved)){
 						System.out.println("Book#" + tokensArray[SECONDINDEX] + " removed.");
@@ -54,7 +56,7 @@ public class Kiosk {
 						System.out.println("Unable to remove, the library does not have this book.");
 					}
 					break;
-				case "O":
+				case "O": //checking out a book
 					Book bookToBeCheckedOut = new Book(tokensArray[SECONDINDEX]);
 					if (library.checkOut(bookToBeCheckedOut)){
 						System.out.println("You've checked out Book#" + tokensArray[SECONDINDEX] + ". Enjoy!");
@@ -63,7 +65,7 @@ public class Kiosk {
 						System.out.println("Book#" + tokensArray[SECONDINDEX] + " is not available.");
 					}
 					break;
-				case "I":
+				case "I"://returning a book
 					Book bookToBeReturned = new Book(tokensArray[SECONDINDEX]);
 					if (library.returns(bookToBeReturned)){
 						System.out.println("Book#" + tokensArray[SECONDINDEX] + " return has completed. Thanks!");
@@ -72,7 +74,7 @@ public class Kiosk {
 						System.out.println("Unable to return Book#" + tokensArray[SECONDINDEX] + ".");
 					}
 					break;
-				case "PA":
+				case "PA"://printing out all the books in the library
 					if (library.isempty()) {
 						System.out.println("Library catalog is empty!");
 					}
@@ -82,7 +84,7 @@ public class Kiosk {
 					System.out.println("**End of list");
 					}
 					break;
-				case "PD":
+				case "PD"://printing out all the books in the library by date (ascending)
 					if (library.isempty()) {
 						System.out.println("Library catalog is empty!");
 					}
@@ -92,7 +94,7 @@ public class Kiosk {
 					System.out.println("**End of list");
 					}
 					break;
-				case "PN":
+				case "PN"://printing out all the books in the library by serial number (ascending)
 					if (library.isempty()) {
 						System.out.println("Library catalog is empty!");
 					}
@@ -102,10 +104,10 @@ public class Kiosk {
 					System.out.println("**End of list");
 					}
 					break;
-				case "Q":
+				case "Q"://Quits the program
 					Quit = true;
 					break;
-				default:
+				default: //Any other user input
 					System.out.println("Invalid command!");
 					break;
 			}
@@ -117,7 +119,11 @@ public class Kiosk {
 	
 	
 	
-	
+	/**
+	 * A helper method that converts proper user input into a more usable form
+	 * @param token is a stringTokenizer object containing the segmented user input
+	 * @return an array that contains the user input separated appropriately 
+	 */
 	private String[] tokenizedInput(StringTokenizer token) {
 		String tokens[] = new String[MAXINPUTS];
 		for (int i=0; i<MAXINPUTS; i++) {

@@ -1,7 +1,11 @@
 import java.util.StringTokenizer;
 import java.util.Calendar;
 
-
+/**
+ *A class that hold data for a date with methods to gain more information.
+ *Also provides utility to check for valid dates(accounting for leap years and other parameters)
+ *@author Abdullah Salem, Gent Blaku
+ */
 public class Date {
 	private int year;
 	private int month;
@@ -10,6 +14,10 @@ public class Date {
 	private static final int QUARTER  = 4, CENTURY = 100, QUADRICENTENNIAL = 400;
 	private static final int MAXMONTH = 12, MINMONTH = 1;
 	
+	/**
+	 * Creates a object of the Date Class
+	 * @param date in a "mm/dd/yyyy" string format
+	 */
 	public Date(String date) {	//taking mm/dd/yyyy and create a Date object
 		StringTokenizer tokenizer = new StringTokenizer(date, "/");
 		this.month = Integer.parseInt(tokenizer.nextToken());
@@ -18,7 +26,9 @@ public class Date {
 		
 	} 
 	
-	
+	/**
+	 * Creates a object of the Date Class that corresponds to today's date
+	 */
 	public Date() { 
 		Calendar today = Calendar.getInstance();
 		this.month = today.get(Calendar.MONTH);
@@ -28,7 +38,10 @@ public class Date {
 	} //create an object with today’s date (see Calendar class)
 	
 	
-	
+	/**
+	 * A testbed main that goes through many different test inputs
+	 * @param args is not used
+	 */
 	public static void main(String[] args) {
 		boolean valid;
 		
@@ -57,8 +70,6 @@ public class Date {
 		else {
 			System.out.println("Test Case#2 is not valid, but it returned true. FAILED!");
 		}
-		
-		
 		
 		
 		//Invalid Months
@@ -283,10 +294,6 @@ public class Date {
 		else {
 			System.out.println("Test Case#19 is not valid, and it returned true. FAILED!");
 		}
-		
-		
-		
-		
 	}
 	
 	
@@ -295,7 +302,11 @@ public class Date {
 	
 	
 	
-	
+	/**
+	 * A helper method to verify if a year was a leap year
+	 * @param bookYear to be checked
+	 * @return true if it is a leapyear, false if not
+	 */
 	private boolean checkForLeapYear(int bookYear) {
 		if (bookYear % QUARTER == 0 ) {
 			if(bookYear % CENTURY == 0) {
@@ -314,7 +325,11 @@ public class Date {
 	}
 	
 	
-	
+	/**
+	 * A method that checks if the date object has a valid date/
+	 * A valid date is one that is both possible, not in the future, and not in the distant past.
+	 * @return true if the date is valid, false if it is not
+	 */
 	public boolean isValid() { 
 		if (this.day < 1) {
 			return false;
@@ -416,7 +431,11 @@ public class Date {
 	
 	
 	
-	
+	/**
+	 * A method that checks if the date of the object is chronologically before the date of the other object.
+	 * @param other is the object of the date class to be measure against
+	 * @return true if this object is older, false if it is younger
+	 */
 	public boolean isOlderThan(Date other) {
 		if (this.year > other.year) {
 			return false;
@@ -443,7 +462,12 @@ public class Date {
 	
 	
 	
-	
+	/**
+	 * Overriding the equals method inherited from the object class.
+	 * Compares if this object is equal to another object based on certain criteria.
+	 * @param obj is an object that is being compared to this object
+	 * @return true if this object is equal to the other object, false if not equal to
+	 */
 	@Override
 	public boolean equals(Object obj){
 		if (obj == null) {
@@ -457,9 +481,12 @@ public class Date {
 		return false;
 	}
 	
+	/**
+	 * Overriding the toString method of inherited from the object class.
+	 * @returns a string representing this object
+	 */
 	@Override
-	public String toString() { 
-		//make this prettier
+	public String toString() {
 		return String.valueOf(this.month) + "/" + String.valueOf(this.day) + "/" + String.valueOf(this.year);
 	}
 	
